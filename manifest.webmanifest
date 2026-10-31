@@ -1,0 +1,21 @@
+{
+  "name": "Vermont land and forest reference",
+  "short_name": "VT Land Ref",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#151a17",
+  "theme_color": "#151a17",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

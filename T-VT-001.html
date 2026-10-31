@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cutting contrary to the approved plan</title><style>
+:root { --bg:#f6f5f1; --surface:#fff; --text:#1f2a22; --muted:#5d6a60; --line:#dcdad2; --accent:#2f6b45; --warn:#9a5b00; --warn-bg:#fbefd9; --ok:#2f6b45; --ok-bg:#e2f1e7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#151a17; --surface:#1e2521; --text:#e8ece8; --muted:#9aa79d; --line:#323b35; --accent:#7cc795; --warn:#f0b45a; --warn-bg:#3a2e17; --ok:#7cc795; --ok-bg:#1b3325; } }
+:root[data-theme="dark"] { --bg:#151a17; --surface:#1e2521; --text:#e8ece8; --muted:#9aa79d; --line:#323b35; --accent:#7cc795; --warn:#f0b45a; --warn-bg:#3a2e17; --ok:#7cc795; --ok-bg:#1b3325; color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:860px; margin:0 auto; padding:18px 16px 56px; }
+a { color:var(--accent); }
+.nav { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:10px; }
+button { font:inherit; background:var(--surface); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:3px 10px; cursor:pointer; }
+h1 { font-size:1.9rem; line-height:1.2; margin:6px 0 2px; }
+.latin { font-style:italic; color:var(--muted); margin:0 0 10px; }
+.badges { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 14px; }
+.badge { font-size:.78rem; border-radius:999px; padding:2px 10px; background:var(--ok-bg); color:var(--ok); }
+.badge.warn { background:var(--warn-bg); color:var(--warn); }
+h2 { font-size:.82rem; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin:30px 0 8px; padding-bottom:4px; border-bottom:1px solid var(--line); }
+h3, h4 { margin:18px 0 6px; font-size:1.02rem; }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 16px; margin:10px 0; }
+dl { display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; margin:0; }
+dt { color:var(--muted); } dd { margin:0; overflow-wrap:anywhere; }
+p { margin:8px 0; } ul, ol { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+figure { margin:0; background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+figure img { display:block; width:100%; height:auto; max-height:420px; object-fit:cover; background:var(--bg); }
+figcaption { font-size:.8rem; color:var(--muted); padding:8px 12px; line-height:1.4; }
+.tablewrap { overflow-x:auto; margin:8px 0; }
+table { border-collapse:collapse; width:100%; font-size:.92rem; }
+th, td { text-align:left; vertical-align:top; padding:7px 10px; border-bottom:1px solid var(--line); }
+th { color:var(--muted); font-weight:600; white-space:nowrap; }
+.mine { border-color:var(--accent); }
+.small { font-size:.85rem; color:var(--muted); }
+.ref { border-bottom:1px dotted var(--muted); cursor:help; }
+.cats { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; margin:14px 0; }
+.catcard { display:block; text-decoration:none; color:inherit; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.catcard:hover { border-color:var(--accent); }
+.catcard strong { font-size:1.08rem; color:var(--accent); }
+.catcard span { display:block; margin:4px 0 6px; }
+.catcard small { color:var(--muted); line-height:1.5; display:block; }
+ul.idx { list-style:none; padding-left:0; columns:2 260px; column-gap:28px; }
+ul.idx li { break-inside:avoid; }
+code { background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:0 4px; }
+@media (max-width:560px) { dl { grid-template-columns:1fr; } dt { margin-top:6px; } }
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#151a17"><link rel="apple-touch-icon" href="icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="VT Land Ref"></head><body><main><div class="nav"><span><a href="index.html">Library</a> · <a href="current-use.html">Current Use topics</a></span><button id="tt" type="button">Theme</button></div><h1>Cutting contrary to the approved plan</h1><div class="badges"><span class="badge warn">tripwire</span><span class="badge warn">T-VT-001</span></div><div class="card mine"><p><strong>A summary, not legal advice.</strong> This is what your reference library records about the rule, not a ruling on your land. <strong>Who to ask:</strong> county forester, current use program office, consulting forester.</p></div><p>Timber harvesting on enrolled land is allowed, but only as the approved plan prescribes. A view opening is not a plan treatment, so cutting trees for a view on enrolled land needs an approved amendment first, or a forester-led harvest confirmed as consistent with the plan. Cutting contrary to the plan "during the remaining term of the plan" is development under the statute.</p>
+<p>Before cutting: confirm in writing (a) whether the land is still enrolled on the date you will cut, (b) that the trees are not in a stream or wetland buffer, and (c) who is cutting and whether they follow the accepted management practices. If land has left the program, cutting is no longer a program matter, but state wetland and water quality rules still apply.</p><div class="card"><dl><dt>What triggers it</dt><dd>Cutting trees: trees are cut that the approved plan does not prescribe, or outside its timing window (3 years either side of a prescribed year), on enrolled land during the plan term</dd><dt>What follows</dt><dd>treated as development: land use change tax on the affected land, removal of the parcel from the program, and a five-year bar on re-enrolling (Standards §2.3.1, §2.3.3)</dd><dt>How to avoid it</dt><dd>get the county forester&#x27;s approval of a plan amendment BEFORE cutting; or cut only after the land has left the program, confirmed in writing</dd><dt>Set by</dt><dd>county forester (FPR); Department of Taxes</dd><dt>Source</dt><dd>32 V.S.A. § 3752(5)(C); Standards 2026 §2.3.1, §2.3.3</dd><dt>Authorities</dt><dd><a href="A-VT-001.html">A-VT-001</a>, <a href="A-VT-004.html">A-VT-004</a></dd><dt>Builds on</dt><dd><a href="S-VT-006.html">S-VT-006</a></dd></dl></div><h2>Forest practices that refer to this</h2><div class="card"><ul><li><a href="PRAC-VT-001.html">Forest Management and Harvesting Overview</a></li><li><a href="PRAC-VT-002.html">Silvicultural Systems and Treatments</a></li><li><a href="PRAC-VT-004.html">Selling Timber and Working With Professionals</a></li><li><a href="PRAC-VT-005.html">Harvest Timing and Seasons</a></li><li><a href="PRAC-VT-007.html">Legal Checks Before a Harvest</a></li></ul></div><h2>Before contracting a logger</h2><p>A county forester's 2026 reminder to an owner: call the consulting forester or the county forester <strong>before</strong> contracting with anyone to log the woodlot. Cutting that the plan does not prescribe is treated as development: the entire parcel comes out of enrollment, the Land Use Change Tax is assessed on the acres subject to the development, and the parcel is ineligible for five years (Standards §2.3.1; 32 V.S.A. chapter 142). The opposite failure also counts: not carrying out prescribed management inside its window can lead to removal.</p><h2>What this page is based on</h2><div class="card small"><p><strong>Kind of source:</strong> primary</p><p><strong>What was read:</strong> the original working vault&#x27;s summaries of the cited source; not re-checked against live sources. Read again 2026-10-30 against Standards 2026 §2.3.1 (PDF) and a county forester&#x27;s written reminder of 2026-10-28.</p><p><strong>Last checked:</strong> 2026-10-30</p></div><p class="small">Vermont land and forest reference, built 2026-10-31. Rules and dates here are summaries, not legal advice; dates shift with elevation and year. <a href="credits.html">Photo credits</a> · Note: <code>_reference/US-VT/Tripwires/T-VT-001 Cutting Contrary to the Plan.md</code></p></main><script>(function(){var r=document.documentElement,b=document.getElementById('tt');try{var t=localStorage.getItem('vt-reference-theme');if(t==='dark'||t==='light')r.setAttribute('data-theme',t);}catch(e){}if(b)b.addEventListener('click',function(){var c=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('vt-reference-theme',n);}catch(e){}});})();</script><script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){});}</script></body></html>

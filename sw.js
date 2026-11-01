@@ -1,8 +1,78 @@
-const CACHE = "vt-reference-2026-11-01-194";
-const PRECACHE = ["./", "404.html", "A-VT-001.html", "A-VT-002.html", "A-VT-003.html", "A-VT-004.html", "A-VT-005.html", "A-VT-006.html", "A-VT-007.html", "A-VT-008.html", "A-VT-009.html", "A-VT-010.html", "GL-VT-001.html", "INV-VT-001.html", "INV-VT-002.html", "INV-VT-003.html", "INV-VT-004.html", "INV-VT-005.html", "INV-VT-006.html", "INV-VT-007.html", "INV-VT-008.html", "INV-VT-009.html", "INV-VT-010.html", "INV-VT-011.html", "INV-VT-012.html", "INV-VT-013.html", "INV-VT-014.html", "PRAC-VT-001.html", "PRAC-VT-002.html", "PRAC-VT-003.html", "PRAC-VT-004.html", "PRAC-VT-005.html", "PRAC-VT-006.html", "PRAC-VT-007.html", "PRAC-VT-008.html", "PRAC-VT-009.html", "PRAC-VT-010.html", "PRAC-VT-011.html", "PRAC-VT-012.html", "PRAC-VT-013.html", "PRAC-VT-014.html", "PRAC-VT-015.html", "PRAC-VT-016.html", "R-VT-001.html", "R-VT-002.html", "R-VT-003.html", "R-VT-004.html", "R-VT-005.html", "R-VT-006.html", "R-VT-007.html", "R-VT-008.html", "RT-VT-001.html", "S-VT-001.html", "S-VT-002.html", "S-VT-003.html", "S-VT-004.html", "S-VT-005.html", "S-VT-006.html", "S-VT-007.html", "S-VT-008.html", "SP-VT-001.html", "SP-VT-002.html", "SP-VT-003.html", "SP-VT-004.html", "SP-VT-005.html", "SP-VT-006.html", "SP-VT-007.html", "SP-VT-008.html", "SP-VT-009.html", "SP-VT-010.html", "SP-VT-011.html", "SP-VT-012.html", "SP-VT-013.html", "SP-VT-014.html", "SP-VT-015.html", "SP-VT-016.html", "SP-VT-017.html", "SP-VT-018.html", "SP-VT-019.html", "SP-VT-020.html", "SP-VT-021.html", "SP-VT-022.html", "SP-VT-023.html", "SP-VT-024.html", "SP-VT-025.html", "SP-VT-026.html", "SP-VT-027.html", "SP-VT-028.html", "SP-VT-029.html", "SP-VT-030.html", "SP-VT-031.html", "SP-VT-032.html", "SP-VT-033.html", "SP-VT-034.html", "SP-VT-035.html", "SP-VT-036.html", "SP-VT-037.html", "SP-VT-038.html", "SP-VT-039.html", "SP-VT-040.html", "SP-VT-041.html", "SP-VT-042.html", "SP-VT-043.html", "SP-VT-044.html", "SP-VT-045.html", "SP-VT-046.html", "SP-VT-047.html", "SP-VT-048.html", "SP-VT-049.html", "SP-VT-050.html", "SP-VT-051.html", "SP-VT-052.html", "SP-VT-053.html", "SP-VT-054.html", "SP-VT-055.html", "SP-VT-056.html", "SP-VT-057.html", "SP-VT-058.html", "SP-VT-059.html", "SP-VT-060.html", "SP-VT-061.html", "SP-VT-062.html", "SP-VT-063.html", "SP-VT-064.html", "SP-VT-065.html", "SP-VT-066.html", "SP-VT-067.html", "SP-VT-068.html", "SP-VT-069.html", "SP-VT-070.html", "SP-VT-071.html", "SP-VT-072.html", "SP-VT-073.html", "SP-VT-074.html", "SP-VT-075.html", "SP-VT-076.html", "SP-VT-077.html", "SP-VT-078.html", "SP-VT-079.html", "SP-VT-080.html", "SP-VT-081.html", "SP-VT-082.html", "SP-VT-083.html", "SP-VT-084.html", "SP-VT-085.html", "SP-VT-086.html", "SP-VT-087.html", "SP-VT-088.html", "SP-VT-089.html", "SP-VT-090.html", "SP-VT-091.html", "SP-VT-092.html", "SP-VT-093.html", "SP-VT-094.html", "SP-VT-095.html", "SP-VT-096.html", "SP-VT-097.html", "SP-VT-098.html", "SP-VT-099.html", "SP-VT-100.html", "SP-VT-101.html", "SP-VT-102.html", "SP-VT-103.html", "SP-VT-104.html", "SP-VT-105.html", "SP-VT-106.html", "SP-VT-107.html", "SP-VT-108.html", "SP-VT-109.html", "SP-VT-110.html", "SP-VT-111.html", "SP-VT-112.html", "SP-VT-113.html", "SP-VT-114.html", "SP-VT-115.html", "SP-VT-116.html", "SP-VT-117.html", "T-VT-001.html", "T-VT-002.html", "T-VT-003.html", "T-VT-004.html", "T-VT-005.html", "T-VT-006.html", "animals.html", "credits.html", "current-use.html", "forest-practices.html", "how-to-identify-grasses.html", "how-to-identify-trees.html", "how-to-identify-wildflowers.html", "icon-180.png", "icon-192.png", "icon-512.png", "index.html", "invasives.html", "manifest.webmanifest", "plants.html", "reference.html", "vermont-sources.html", "vermont-tools-and-resources.html", "waterfowl-and-migration-in-vermont.html", "img/INV-VT-001-honeysuckle-flowers-leaves.jpg", "img/INV-VT-002-leaf.jpg", "img/INV-VT-003-knotweed-leaves-stems.jpg", "img/INV-VT-004-buckthorn-fruit.jpg", "img/INV-VT-004-buckthorn-leaves.jpg", "img/INV-VT-005-barberry-berries.jpg", "img/INV-VT-006-garlic-mustard-flowers.jpg", "img/INV-VT-007-eab-adult-underside.jpg", "img/INV-VT-007-eab-exit-holes.jpg", "img/INV-VT-008-wild-chervil-plants.jpg", "img/INV-VT-009-jumping-worms.jpg", "img/INV-VT-010-hwa-ovisacs.jpg", "img/INV-VT-011-egg-mass.jpg", "img/INV-VT-011-female-egg-mass.jpg", "img/INV-VT-012-cocoons.jpg", "img/PRAC-VT-010-landing-and-loaded-truck.jpg", "img/PRAC-VT-010-landing-slash-pile.jpg", "img/PRAC-VT-010-skid-trail-in-snow.jpg", "img/SP-VT-001-leaves-spring.jpg", "img/SP-VT-001-trunk.jpg", "img/SP-VT-002-bark.jpg", "img/SP-VT-002-needles.jpg", "img/SP-VT-003-bark.jpg", "img/SP-VT-003-leaves.jpg", "img/SP-VT-004-fawn.jpg", "img/SP-VT-005-shore.jpg", "img/SP-VT-006-cow-in-water.jpg", "img/SP-VT-007-hen-fall.jpg", "img/SP-VT-008-crossing.jpg", "img/SP-VT-009-summer-coat.jpg", "img/SP-VT-010-adult.jpg", "img/SP-VT-010-pair.jpg", "img/SP-VT-011-on-trunk.jpg", "img/SP-VT-012-perched.jpg", "img/SP-VT-013-fisher.jpg", "img/SP-VT-014-bark.jpg", "img/SP-VT-014-leaves-fall.jpg", "img/SP-VT-014-leaves-summer.jpg", "img/SP-VT-015-bark.jpg", "img/SP-VT-015-leaf-fall.jpg", "img/SP-VT-015-leaves-spring.jpg", "img/SP-VT-016-bark.jpg", "img/SP-VT-016-leaves-catkin.jpg", "img/SP-VT-017-bark.jpg", "img/SP-VT-017-leaves-fall.jpg", "img/SP-VT-017-leaves-summer.jpg", "img/SP-VT-018-bark.jpg", "img/SP-VT-018-leaves.jpg", "img/SP-VT-019-bark.jpg", "img/SP-VT-019-leaves-fall.jpg", "img/SP-VT-019-leaves-summer.jpg", "img/SP-VT-020-acorns.jpg", "img/SP-VT-020-leaves.jpg", "img/SP-VT-021-bark.jpg", "img/SP-VT-021-foliage-cones.jpg", "img/SP-VT-022-bark.jpg", "img/SP-VT-022-foliage-snow.jpg", "img/SP-VT-022-sapling-vermont.jpg", "img/SP-VT-023-bark.jpg", "img/SP-VT-023-foliage-summer.jpg", "img/SP-VT-023-needles.jpg", "img/SP-VT-024-foliage-close.jpg", "img/SP-VT-024-foliage-spray.jpg", "img/SP-VT-024-trunk.jpg", "img/SP-VT-025-leaves.jpg", "img/SP-VT-025-trunk.jpg", "img/SP-VT-026-bark.jpg", "img/SP-VT-026-fruit.jpg", "img/SP-VT-027-caterpillar.jpg", "img/SP-VT-028-larva-beech.jpg", "img/SP-VT-028-larva-pale.jpg", "img/SP-VT-029-moth-pupa.jpg", "img/SP-VT-030-half-black.jpg", "img/SP-VT-030-tricolored.jpg", "img/SP-VT-031-male-back.jpg", "img/SP-VT-031-on-flower.jpg", "img/SP-VT-032-on-flower.jpg", "img/SP-VT-047-flower-cluster.jpg", "img/SP-VT-047-plant-pollinator-garden.jpg", "img/SP-VT-048-field.jpg", "img/SP-VT-049-stand.jpg", "img/SP-VT-050-flowers.jpg", "img/SP-VT-051-flowers.jpg", "img/SP-VT-052-plant.jpg", "img/SP-VT-053-spikes.jpg", "img/SP-VT-054-flowers.jpg", "img/SP-VT-055-plant.jpg", "img/SP-VT-056-flower.jpg", "img/SP-VT-057-flower.jpg", "img/SP-VT-058-umbel.jpg", "img/SP-VT-059-flowers.jpg", "img/SP-VT-060-flowers.jpg", "img/SP-VT-061-flower.jpg", "img/SP-VT-062-flowers.jpg", "img/SP-VT-063-flowers.jpg", "img/SP-VT-064-flowers.jpg", "img/SP-VT-065-flower.jpg", "img/SP-VT-066-chickadee.jpg", "img/SP-VT-067-hermit-thrush.jpg", "img/SP-VT-068-wood-thrush.jpg", "img/SP-VT-069-veery.jpg", "img/SP-VT-070-ovenbird.jpg", "img/SP-VT-071-red-eyed-vireo.jpg", "img/SP-VT-072-scarlet-tanager.jpg", "img/SP-VT-073-black-throated-blue-warbler.jpg", "img/SP-VT-074-downy-woodpecker.jpg", "img/SP-VT-075-hairy-woodpecker.jpg", "img/SP-VT-076-yellow-bellied-sapsucker.jpg", "img/SP-VT-077-white-breasted-nuthatch.jpg", "img/SP-VT-078-great-horned-owl.jpg", "img/SP-VT-079-red-tailed-hawk.jpg", "img/SP-VT-080-broad-winged-hawk.jpg", "img/SP-VT-081-bobolink.jpg", "img/SP-VT-082-eastern-meadowlark.jpg", "img/SP-VT-083-savannah-sparrow.jpg", "img/SP-VT-084-eastern-bluebird.jpg", "img/SP-VT-085-american-woodcock.jpg", "img/SP-VT-086-american-goldfinch.jpg", "img/SP-VT-087-american-robin.jpg", "img/SP-VT-088-spring-peeper.jpg", "img/SP-VT-089-american-toad.jpg", "img/SP-VT-090-newt-adult.jpg", "img/SP-VT-090-red-eft.jpg", "img/SP-VT-091-red-backed-salamander.jpg", "img/SP-VT-092-blue-spotted-salamander.jpg", "img/SP-VT-093-spotted-salamander.jpg", "img/SP-VT-094-northern-leopard-frog.jpg", "img/SP-VT-095-gray-treefrog.jpg", "img/SP-VT-096-green-frog.jpg", "img/SP-VT-097-jefferson-salamander.jpg", "img/SP-VT-098-blacklegged-adult-female.jpg", "img/SP-VT-098-blacklegged-sizes.jpg", "img/SP-VT-099-dog-tick-female.jpg", "img/SP-VT-099-dog-tick-male.jpg", "img/SP-VT-100-woodchuck-tick-engorged.jpg", "img/SP-VT-101-moose-hair-loss.jpg", "img/SP-VT-101-winter-tick-larva.jpg", "img/SP-VT-102-lone-star-female.jpg", "img/SP-VT-103-deer-fly-banded.jpg", "img/SP-VT-103-deer-fly-green-eye.jpg", "img/SP-VT-104-horse-fly-black.jpg", "img/SP-VT-104-horse-fly-tabanus.jpg", "img/SP-VT-105-black-fly-adult.jpg", "img/SP-VT-105-black-fly-swarm.jpg", "img/SP-VT-106-mosquito-on-flower.jpg", "img/SP-VT-106-woodland-pool-mosquito.jpg", "img/SP-VT-107-canada-goose-adult-goslings.jpg", "img/SP-VT-108-snow-geese-flock-flight.jpg", "img/SP-VT-108-snow-geese-on-water.jpg", "img/SP-VT-109-mallard-pair.jpg", "img/SP-VT-110-wood-duck-drake.jpg", "img/SP-VT-111-black-duck.jpg", "img/SP-VT-112-common-merganser-male.jpg", "img/SP-VT-113-hooded-merganser-male.jpg", "img/SP-VT-114-ring-necked-duck-pair.jpg", "img/SP-VT-115-green-winged-teal-male.jpg", "img/SP-VT-116-goldeneye-male.jpg", "img/SP-VT-117-bufflehead-male.jpg"];
-self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => Promise.all(PRECACHE.map(u => c.add(u).catch(() => null)))).then(() => self.skipWaiting())); });
-self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
+const BUILD = "0f7923b257cb";
+
+// Offline copy of the library. Every page and picture is cached on its own, keyed by a content hash listed in sw-manifest.json, so an update
+// downloads only what changed. Recordings are never cached (they stream from Wikimedia Commons).
+const FILES = 'vt-ref-files', META = 'vt-ref-meta';
+const SCOPE = self.registration.scope;
+const abs = u => new URL(u, SCOPE).href;
+const say = async msg => { for (const c of await self.clients.matchAll({ includeUncontrolled: true })) c.postMessage(msg); };
+const readJSON = async (cache, key) => { const r = await cache.match(key); return r ? r.json() : null; };
+let syncing = null;
+
+async function status() {
+  const meta = await caches.open(META), cache = await caches.open(FILES);
+  const man = await readJSON(meta, 'manifest'), have = (await readJSON(meta, 'hashes')) || {};
+  const files = man ? man.files : {}, urls = Object.keys(files);
+  let done = 0;
+  for (const u of urls) if (have[u] === files[u] && await cache.match(abs(u))) done++;
+  return { type: 'offline-status', done, total: urls.length, build: man ? man.build : '', working: syncing !== null };
+}
+
+async function doSync() {
+  const meta = await caches.open(META), cache = await caches.open(FILES);
+  let man;
+  try { const r = await fetch(abs('sw-manifest.json'), { cache: 'reload' }); if (!r.ok) throw 0; man = await r.json(); }
+  catch (e) { return; }                                   // offline or the site is down: keep what is already saved
+  const have = (await readJSON(meta, 'hashes')) || {};
+  const files = man.files, urls = Object.keys(files), total = urls.length;
+  const keep = {}, todo = [];
+  for (const u of urls) {
+    if (have[u] === files[u] && await cache.match(abs(u))) keep[u] = files[u]; else todo.push(u);
+  }
+  await meta.put('manifest', new Response(JSON.stringify(man)));
+  let done = total - todo.length, i = 0, lastSaid = 0;
+  const progress = async force => { if (force || done - lastSaid >= 5) { lastSaid = done; await say({ type: 'offline-status', done, total, build: man.build, working: true }); } };
+  await progress(true);
+  const worker = async () => {
+    while (i < todo.length) {
+      const u = todo[i++];
+      try {
+        const r = await fetch(abs(u), { cache: 'reload' });
+        if (!r.ok) throw 0;
+        await cache.put(abs(u), r);
+        keep[u] = files[u]; done++;
+      } catch (e) { /* left out of the saved list, so the next sync tries it again */ }
+      await progress(false);
+    }
+  };
+  await Promise.all([1, 2, 3, 4, 5, 6].map(worker));
+  for (const k of await cache.keys()) {                    // drop pages and pictures that are no longer in the library
+    const rel = k.url.slice(SCOPE.length).split('?')[0];
+    if (!(rel in files)) await cache.delete(k);
+  }
+  await meta.put('hashes', new Response(JSON.stringify(keep)));
+  await say({ type: 'offline-status', done, total, build: man.build, working: false });
+}
+const sync = () => { if (!syncing) syncing = doSync().catch(() => {}).finally(() => { syncing = null; }); return syncing; };
+
+self.addEventListener('install', e => { e.waitUntil(sync().then(() => self.skipWaiting())); });
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== FILES && k !== META).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+});
+self.addEventListener('message', e => {
+  const t = e.data && e.data.type;
+  if (t === 'status') e.waitUntil(status().then(s => e.source && e.source.postMessage(s)));
+  if (t === 'sync') e.waitUntil(sync());
+});
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET' || new URL(e.request.url).origin !== self.location.origin) return;   // recordings stream from Wikimedia Commons and are never cached
-  e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => { const copy = r.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); return r; }).catch(() => caches.match('index.html'))));
+  const req = e.request, url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== self.location.origin) return;
+  e.respondWith((async () => {
+    const c = await caches.open(FILES);
+    let hit = await c.match(req, { ignoreSearch: true });
+    if (!hit && url.pathname.endsWith('/')) hit = await c.match(abs('index.html'));
+    if (hit) return hit;
+    try { const r = await fetch(req); if (r.ok) c.put(req, r.clone()); return r; }
+    catch (err) { return (await c.match(abs('index.html'))) || Response.error(); }
+  })());
 });

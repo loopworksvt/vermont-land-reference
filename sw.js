@@ -1,4 +1,4 @@
-const BUILD = "0f7923b257cb";
+const BUILD = "83ef654ada9c";
 
 // Offline copy of the library. Every page and picture is cached on its own, keyed by a content hash listed in sw-manifest.json, so an update
 // downloads only what changed. Recordings are never cached (they stream from Wikimedia Commons).

@@ -21,12 +21,16 @@ h3, h4 { margin:18px 0 6px; font-size:1.02rem; }
 dl { display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; margin:0; }
 dt { color:var(--muted); } dd { margin:0; overflow-wrap:anywhere; }
 p { margin:8px 0; } ul, ol { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+.gallery.top { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; margin:6px 0 4px; padding-bottom:6px; -webkit-overflow-scrolling:touch; }
+.gallery.top figure { flex:0 0 min(88%,440px); scroll-snap-align:start; }
+.gallery.top figure img { max-height:320px; }
 .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
 figure { margin:0; background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
 figure img { display:block; width:100%; height:auto; max-height:420px; object-fit:cover; background:var(--bg); }
 figcaption { font-size:.8rem; color:var(--muted); padding:8px 12px; line-height:1.4; }
 .tablewrap { overflow-x:auto; margin:8px 0; }
 table { border-collapse:collapse; width:100%; font-size:.92rem; }
+.tablewrap { -webkit-overflow-scrolling:touch; }
 th, td { text-align:left; vertical-align:top; padding:7px 10px; border-bottom:1px solid var(--line); }
 th { color:var(--muted); font-weight:600; white-space:nowrap; }
 .mine { border-color:var(--accent); }

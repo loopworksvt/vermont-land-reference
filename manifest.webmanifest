@@ -1,6 +1,6 @@
 {
-  "name": "Vermont land and forest reference",
-  "short_name": "VT Land Ref",
+  "name": "Vermont Woodland Owner's Reference",
+  "short_name": "VT Woodland Ref",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

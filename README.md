@@ -8,4 +8,4 @@ Open `index.html` (or the site address), then use your browser's Add to Home Scr
 - Photographs and the bird-call clips (cut from openly licensed recordings) are public domain or openly licensed; credits are on each page and in `credits.html`.
 - Generated from a private records vault by `export_library.py`; it contains no personal records. Do not edit these files by hand: rebuild and replace them.
 
-License of the text: not chosen yet (the owner decides before the site is public).
+License of the text: © Loop Works, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Pictures and recordings keep their own licenses, listed in `credits.html`.

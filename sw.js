@@ -1,4 +1,4 @@
-const BUILD = "8218cd8f64a9";
+const BUILD = "e05863ff2a27";
 
 // Offline copy of the library. Every page and picture is cached on its own, keyed by a content hash listed in sw-manifest.json, so an update
 // downloads only what changed. The trimmed bird-call clips are part of the library; the full recordings are on Wikimedia Commons and are not cached.

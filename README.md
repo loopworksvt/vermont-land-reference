@@ -3,7 +3,7 @@
 A reference library of Vermont plants, animals, forest practices, Current Use rules, deadlines and sources, as web pages that work on a phone.
 Open `index.html` (or the site address), then use your browser's Add to Home Screen; every page and picture is saved on the device after the first visit (each file separately, so an update downloads only what changed), and a line at the foot of each page says how many are saved.
 
-- Built 2026-11-10: 232 pages, 342 pictures, 79 MB.
+- Built 2026-11-11: 232 pages, 342 pictures, 79 MB.
 - Rules and dates are summaries of public sources, not legal advice. Each page says who to ask and what was read.
 - Photographs and the bird-call clips (cut from openly licensed recordings) are public domain or openly licensed; credits are on each page and in `credits.html`.
 - Generated from a private records vault by `export_library.py`; it contains no personal records. Do not edit these files by hand: rebuild and replace them.

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Current Use basics: start here</title><style>
+ol.tl{list-style:none;margin:6px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line)}
+ol.tl li{position:relative;margin:0 0 14px;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+ol.tl li::before{content:"";position:absolute;left:-28px;top:16px;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+ol.tl .when{display:inline-block;font-size:.78rem;background:var(--ok-bg);color:var(--accent);border-radius:999px;padding:1px 10px;margin-right:8px}
+ol.tl p{margin:4px 0 0}
+.catcard.start{border-color:var(--accent);border-width:2px}
+:root { --bg:#f6f5f1; --surface:#fff; --text:#1f2a22; --muted:#5d6a60; --line:#dcdad2; --accent:#2f6b45; --warn:#9a5b00; --warn-bg:#fbefd9; --ok:#2f6b45; --ok-bg:#e2f1e7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#151a17; --surface:#1e2521; --text:#e8ece8; --muted:#9aa79d; --line:#323b35; --accent:#7cc795; --warn:#f0b45a; --warn-bg:#3a2e17; --ok:#7cc795; --ok-bg:#1b3325; } }
+:root[data-theme="dark"] { --bg:#151a17; --surface:#1e2521; --text:#e8ece8; --muted:#9aa79d; --line:#323b35; --accent:#7cc795; --warn:#f0b45a; --warn-bg:#3a2e17; --ok:#7cc795; --ok-bg:#1b3325; color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:860px; margin:0 auto; padding:18px 16px 56px; }
+a { color:var(--accent); }
+.nav { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:10px; }
+button { font:inherit; background:var(--surface); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:3px 10px; cursor:pointer; }
+h1 { font-size:1.9rem; line-height:1.2; margin:6px 0 2px; }
+.latin { font-style:italic; color:var(--muted); margin:0 0 10px; }
+.badges { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 14px; }
+.badge { font-size:.78rem; border-radius:999px; padding:2px 10px; background:var(--ok-bg); color:var(--ok); }
+.badge.warn { background:var(--warn-bg); color:var(--warn); }
+h2 { font-size:.82rem; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin:30px 0 8px; padding-bottom:4px; border-bottom:1px solid var(--line); }
+h3, h4 { margin:18px 0 6px; font-size:1.02rem; }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 16px; margin:10px 0; }
+dl { display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; margin:0; }
+dt { color:var(--muted); } dd { margin:0; overflow-wrap:anywhere; }
+p { margin:8px 0; } ul, ol { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+ul.links { list-style:none; padding-left:0; columns:2 220px; column-gap:24px; }
+ul.links li { break-inside:avoid; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin:10px 0; }
+.sp { display:flex; flex-direction:column; text-decoration:none; color:inherit; background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.sp:hover { border-color:var(--accent); }
+.sp img { width:100%; height:100px; object-fit:cover; display:block; background:var(--bg); }
+.sp .nm { padding:6px 10px 0; font-weight:600; font-size:.92rem; }
+.sp .lt { padding:0 10px 4px; font-style:italic; color:var(--muted); font-size:.78rem; }
+.sp .chips { padding:0 10px 8px; display:flex; gap:4px; flex-wrap:wrap; }
+.chip { display:inline-block; font-size:.72rem; border-radius:999px; padding:1px 9px; background:var(--ok-bg); color:var(--accent); }
+.chip.game { background:var(--warn-bg); color:var(--warn); }
+.chip.bad { background:#fbe3e3; color:#9b1c1c; }
+:root[data-theme="dark"] .chip.bad { background:#3b1d1d; color:#ffb4b4; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip.bad { background:#3b1d1d; color:#ffb4b4; } }
+.filters { display:flex; gap:6px; flex-wrap:wrap; margin:8px 0; }
+.filters button { font:inherit; font-size:.82rem; padding:3px 12px; border-radius:999px; }
+.filters button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+.gallery.top { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; margin:6px 0 4px; padding-bottom:6px; -webkit-overflow-scrolling:touch; }
+.gallery.top figure { flex:0 0 min(88%,440px); scroll-snap-align:start; }
+.gallery.top figure img { max-height:320px; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+figure { margin:0; background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+figure img { display:block; width:100%; height:auto; max-height:420px; object-fit:cover; background:var(--bg); }
+figcaption { font-size:.8rem; color:var(--muted); padding:8px 12px; line-height:1.4; }
+.tablewrap { overflow-x:auto; margin:8px 0; }
+table { border-collapse:collapse; width:100%; font-size:.92rem; }
+.tablewrap { -webkit-overflow-scrolling:touch; }
+th, td { text-align:left; vertical-align:top; padding:7px 10px; border-bottom:1px solid var(--line); }
+th { color:var(--muted); font-weight:600; white-space:nowrap; }
+.mine { border-color:var(--accent); }
+.small { font-size:.85rem; color:var(--muted); }
+.ref { border-bottom:1px dotted var(--muted); cursor:help; }
+.cats { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; margin:14px 0; }
+.catcard { display:block; text-decoration:none; color:inherit; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.catcard:hover { border-color:var(--accent); }
+.catcard strong { font-size:1.08rem; color:var(--accent); }
+.catcard span { display:block; margin:4px 0 6px; }
+.catcard small { color:var(--muted); line-height:1.5; display:block; }
+.catcard .ph { display:flex; gap:3px; margin-top:8px; }
+.catcard .ph img { width:33%; height:56px; object-fit:cover; border-radius:6px; }
+ul.idx { list-style:none; padding-left:0; columns:2 260px; column-gap:28px; }
+ul.idx li { break-inside:avoid; }
+code { background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:0 4px; }
+@media (max-width:560px) { dl { grid-template-columns:1fr; } dt { margin-top:6px; } }
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#151a17"><link rel="apple-touch-icon" href="icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="VT Woodland Ref"></head><body><main><div class="nav"><span><a href="index.html">Home</a> › <a href="current-use.html">Current Use topics</a></span><button id="tt" type="button">Theme</button></div><h1>Current Use basics: start here</h1><div class="badges"></div><p>Vermont's Current Use program (also called Use Value Appraisal, or UVA) taxes enrolled forest land on what it is worth as forest land, not on what it would sell for. In return you manage the land under a plan approved by the state. This page walks through what happens and when. Every step links to the full page.</p><h2>Could my land qualify?</h2><ul><li>At least <strong>25 acres enrolled</strong>, not counting the two acres around a house. See <a href="R-VT-001.html">the acreage rule</a> and <a href="R-VT-007.html">the housesite rule</a>.</li><li>At least 20 of those acres forested, on productive soil, and managed for forest products. <a href="R-VT-006.html">Reserve Forestland</a> is the exception for land kept as old forest.</li><li>A limited amount of open or idle land can be enrolled. See <a href="R-VT-002.html">the open land limit</a>.</li></ul><h2>Getting in</h2><ol class="tl"><li><span class="when">Before you apply</span><strong>A plan and a map</strong>
+<p>A licensed forester prepares the management plan and the property map for your land. Your county forester can refer you to a licensed consulting forester. Start months ahead, because the plan is the longest part. See <a href="A-VT-004.html">the 2026 plan standards</a> for what a plan must contain.</p></li><li><span class="when">September 1</span><strong>Application</strong>
+<p>Send the application to the Department of Taxes. It takes effect the following tax year. See <a href="S-VT-001.html">the application deadline</a>.</p></li><li><span class="when">October 1</span><strong>Plan and map</strong>
+<p>Send the signed plan and three paper copies of the property map to your county forester. See <a href="S-VT-002.html">the plan and map deadline</a>.</p></li><li><span class="when">The next April 1</span><strong>Plan takes effect</strong>
+<p>The plan you filed is now the one you follow.</p></li></ol><h2>Every year</h2><ol class="tl"><li><span class="when">All year</span><strong>Follow the plan</strong>
+<p>Do the work the plan prescribes, within three years before or after the year it names. Cutting outside the plan is a tripwire. See <a href="S-VT-006.html">the three-year window</a> and <a href="T-VT-001.html">cutting contrary to the plan</a>.</p></li><li><span class="when">February 1</span><strong>Report</strong>
+<p>If you did any forestry work last year, file a report of it. No work, no form. See <a href="S-VT-003.html">the yearly report</a>.</p></li></ol><h2>Every ten years</h2><ol class="tl"><li><span class="when">April 1 of the year the plan expires</span><strong>Update the plan</strong>
+<p>A plan lasts at most ten years. Start about eleven months ahead, because an update needs inventory data no more than five years old. See <a href="S-VT-004.html">the ten-year update</a> and <a href="T-VT-006.html">what happens if a plan lapses</a>.</p></li></ol><h2>If something changes</h2><ol class="tl"><li><span class="when">Within 30 days of recording the deed</span><strong>Ownership changes</strong>
+<p>The enrollment stays with the land. The new owner adopts the plan with a signature page, three copies of the plan map and a data entry form. See <a href="T-VT-005.html">ownership changes</a>.</p></li><li><span class="when">Any time</span><strong>Address changes</strong>
+<p>Tell the Current Use office, with your parcel ID and owner ID. See <a href="T-VT-004.html">address changes</a>.</p></li><li><span class="when">Before you build</span><strong>Building, a road, a subdivision or cutting off the plan</strong>
+<p>The state calls these development, and they bring the land use change tax. See <a href="T-VT-002.html">development on enrolled land</a>.</p></li><li><span class="when">Before you split or withdraw land</span><strong>Dropping under 25 acres</strong>
+<p>If enrolled land falls below the minimum, the whole parcel can lose eligibility. See <a href="T-VT-003.html">dropping below the minimum</a>.</p></li></ol><h2>If you leave</h2><ol class="tl"><li><span class="when">30 days after the tax notice</span><strong>Land use change tax</strong>
+<p>Developed land is taxed at 10% of its full fair market value. The date of the notice isn't known until it arrives. See <a href="S-VT-005.html">paying the tax</a> and <a href="R-VT-008.html">how the tax is figured</a>.</p></li></ol><h2>Who to call</h2><p>Start with your <strong>county forester</strong>. They walk your woods, talk through your goals, refer you to consulting foresters and handle Current Use for enrolled forest land. Questions about the application, the bill or an address change go to the Current Use office at the Department of Taxes.</p><h2>Go deeper</h2><p>The full rules, schedules, tripwires and statutes are on the Current Use topics page. The glossary explains the terms: see <a href="GL-VT-001.html">the glossary</a>.</p><p class="small">Vermont Woodland Owner's Reference, built 2026-11-16. Rules and dates here are summaries, not legal advice; dates shift with elevation and year. <a href="about.html">About</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSef25TzzARMYBWR60I_CP8Ka_6tYoxUWD23ZlcWB6a6m8VRyA/viewform" target="_blank" rel="noopener noreferrer">Report a mistake or suggest a topic</a> · <a href="credits.html">Photo and recording credits</a> · The text is by Loop Works, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> (pictures and recordings keep their own licenses)</p><p class="small" id="offline-status" aria-live="polite" style="min-height:2.6em"></p></main><script>(function(){var r=document.documentElement,b=document.getElementById('tt');try{var t=localStorage.getItem('vt-reference-theme');if(t==='dark'||t==='light')r.setAttribute('data-theme',t);}catch(e){}if(b)b.addEventListener('click',function(){var c=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('vt-reference-theme',n);}catch(e){}});})();</script><script>(function(){var el=document.getElementById('offline-status'),asked=false,last=null;if(!el)return;function say(s){el.textContent=s;}if(!('serviceWorker' in navigator)){say('Offline saving is not available in this browser.');return;}function show(d){last=d;if(!d.total){say('Saving this library for offline use…');return;}if(d.done>=d.total){say('Saved for offline use: all '+d.total+' pages and pictures'+(d.build?' (build '+d.build+')':'')+'.');return;}if(d.working){say('Saving for offline use… '+d.done+' of '+d.total);return;}say(d.done+' of '+d.total+' saved for offline use. ');var b=document.createElement('button');b.type='button';b.textContent='Save the rest';b.onclick=function(){post({type:'sync'});say('Saving for offline use…');};el.appendChild(b);if(!asked){asked=true;post({type:'sync'});}}function post(m){navigator.serviceWorker.ready.then(function(r){if(r.active)r.active.postMessage(m);});}navigator.serviceWorker.addEventListener('message',function(e){if(e.data&&e.data.type==='offline-status')show(e.data);});navigator.serviceWorker.register('sw.js').then(function(){post({type:'status'});}).catch(function(){say('Offline saving could not start in this browser.');});})();</script></body></html>

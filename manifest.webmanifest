@@ -1,6 +1,6 @@
 {
-  "name": "Vermont Woodland Owner's Reference",
-  "short_name": "VT Woodland Ref",
+  "name": "Vermont Woodlands",
+  "short_name": "Woodlands",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
